@@ -40,10 +40,10 @@ function AtelierPage() {
             </ul>
           </div>
           <img
-            src="/media/dos-voyage.jpg"
-            alt="Sac à dos, sac à main damier et sac de voyage de la gamme JMH"
+            src="/media/trio-wax.jpg"
+            alt="Conférencier wax et sacs à main en tissu wax siglés JMH Pro'Sign"
             width={1088}
-            height={620}
+            height={616}
             className="h-auto w-full border border-line"
           />
         </div>
