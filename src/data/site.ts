@@ -165,66 +165,79 @@ export const offerings: { cat: OfferingCat; title: string; detail: string }[] = 
   },
 ];
 
-export const lookbook: { cats: OfferingCat[]; src: string; alt: string; caption: string }[] = [
+export type Famille = "atelier" | "personnalisation";
+
+export const familles: { id: Famille; titre: string; texte: string }[] = [
+  {
+    id: "atelier",
+    titre: "Fabriqué à l'atelier",
+    texte: "Pièces réalisées par nos soins, du patron à la finition.",
+  },
+  {
+    id: "personnalisation",
+    titre: "Personnalisation sur articles sélectionnés",
+    texte: "Modèles d'exemple : votre logo, vos couleurs, votre quantité.",
+  },
+];
+
+// Pour ajouter une vraie photo d'atelier : mets le fichier dans public/media/,
+// puis copie un bloc ci-dessous avec famille: "atelier".
+// Pour changer le classement d'une photo, modifie seulement le mot après famille:.
+export const lookbook: {
+  cats: OfferingCat[];
+  famille: Famille;
+  src: string;
+  alt: string;
+  caption: string;
+}[] = [
   {
     cats: ["sacs"],
+    famille: "atelier",
     src: "/media/trio-wax.jpg",
-    alt: "Conférencier wax, sac à main à motifs et sacoche noire siglés JMH Pro'Sign",
-    caption: "Wax & conférencier",
+    alt: "Conférencier wax et sacs à main en tissu wax siglés JMH Pro'Sign",
+    caption: "Conférencier et sacs à main wax",
   },
   {
     cats: ["sacs"],
-    src: "/media/sacs-dos.jpg",
-    alt: "Trois sacs à dos personnalisés JMH Pro'Sign posés sur une étagère",
-    caption: "Sacs à dos",
-  },
-  {
-    cats: ["sacs"],
+    famille: "atelier",
     src: "/media/shopping.jpg",
     alt: "Deux sacs shopping bleus à bandes wax, marque JMH Pro'Sign",
-    caption: "Sacs shopping",
+    caption: "Sacs shopping bandes wax, sur mesure",
   },
   {
     cats: ["sacs"],
+    famille: "atelier",
     src: "/media/porte-voyage.jpg",
-    alt: "Porte-document wax et sac de voyage clair siglés JMH Pro'Sign",
-    caption: "Porte-document & voyage",
+    alt: "Porte-document bleu marine à bande wax et emblème ivoirien, siglé JMH Pro'Sign",
+    caption: "Porte-document wax personnalisé",
   },
   {
     cats: ["sacs"],
-    src: "/media/dos-voyage.jpg",
-    alt: "Sac à dos, sac damier et sac de voyage sur une étagère",
-    caption: "Dos, main et voyage",
+    famille: "personnalisation",
+    src: "/media/sacs-dos.jpg",
+    alt: "Trois sacs à dos personnalisés au logo JMH Pro'Sign",
+    caption: "Sacs à dos à votre logo (modèles d'exemple)",
   },
   {
     cats: ["sacs"],
-    src: "/media/sport-main.jpg",
-    alt: "Sac sport, sac à main, sac à dos et sacoche de l'atelier JMH",
-    caption: "Sport, main, dos",
-  },
-  {
-    cats: ["sacs"],
-    src: "/media/sacs-neige.jpg",
-    alt: "Sacs à dos et sacs de voyage de plusieurs couleurs avec le logo JMH",
-    caption: "Séries couleur",
-  },
-  {
-    cats: ["sacs"],
+    famille: "personnalisation",
     src: "/media/accessoires.jpg",
-    alt: "Sacoche, tote bag, banane et deux sacs de sport personnalisés",
-    caption: "Formats du quotidien",
+    alt: "Sacoche, tote bag, banane et sacs de sport personnalisés",
+    caption: "Sacoches, bananes et sacs de sport (modèles d'exemple)",
   },
   {
     cats: ["textile"],
+    famille: "personnalisation",
     src: "/media/textile.jpg",
-    alt: "Casquettes, cartes de visite, stylos, t-shirts et polos aux couleurs JMH Pro'Sign",
-    caption: "Textile & goodies",
+    alt: "Casquettes, t-shirts et polos aux couleurs JMH Pro'Sign",
+    caption: "T-shirts, polos et casquettes (modèles d'exemple)",
   },
   {
     cats: ["sacs", "papeterie"],
+    famille: "personnalisation",
     src: "/media/catalogue.jpg",
-    alt: "Planche catalogue : blocs-notes, agendas, porte-documents, sacs et housses",
-    caption: "Planche atelier",
+    alt: "Planche : blocs-notes, agendas, porte-documents, sacs et housses",
+    caption: "Papeterie, housses et porte-documents (sur demande)",
   },
 ];
 
@@ -250,7 +263,7 @@ export const engagements = [
 export const reasons = [
   {
     title: "Une équipe qui fait le métier",
-    text: "Fabrication, design et impression sont dans la même maison.",
+    text: "Sacs fabriqués à l'atelier, textiles et accessoires sélectionnés auprès de nos fournisseurs, personnalisés par JMH.",
   },
   {
     title: "Plusieurs supports",
