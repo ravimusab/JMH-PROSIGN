@@ -189,7 +189,27 @@ export const lookbook: {
   src: string;
   alt: string;
   caption: string;
+  w?: number;
+  h?: number;
 }[] = [
+  {
+    cats: ["sacs"],
+    famille: "atelier",
+    src: "/media/atelier-wax-bogolan.jpg",
+    alt: "Cabas et porte-documents en tissu wax, bogolan et kita, sac à dos et sac de sport personnalisés",
+    caption: "Cabas, porte-documents et sacs en wax, bogolan et kita",
+    w: 1000,
+    h: 1500,
+  },
+  {
+    cats: ["sacs", "papeterie"],
+    famille: "atelier",
+    src: "/media/atelier-clients.jpg",
+    alt: "Pochettes de conférence, cabas, sac de sport et sac à dos réalisés pour des institutions et des associations",
+    caption: "Pochettes, cabas et sacs réalisés pour nos clients",
+    w: 1000,
+    h: 1500,
+  },
   {
     cats: ["sacs"],
     famille: "atelier",
@@ -206,10 +226,10 @@ export const lookbook: {
   },
   {
     cats: ["sacs"],
-    famille: "atelier",
+    famille: "personnalisation",
     src: "/media/porte-voyage.jpg",
-    alt: "Porte-document bleu marine à bande wax et emblème ivoirien, siglé JMH Pro'Sign",
-    caption: "Porte-document wax personnalisé",
+    alt: "Porte-document bleu marine à bande wax et sac de voyage, siglés JMH Pro'Sign",
+    caption: "Porte-document et sac de voyage (modèles d'exemple)",
   },
   {
     cats: ["sacs"],
