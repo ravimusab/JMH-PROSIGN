@@ -33,7 +33,7 @@ function RealisationsPage() {
       <section className="mx-auto max-w-6xl px-5 py-14">
         <p className="text-sm font-semibold tracking-widest text-ember uppercase">Réalisations</p>
         <h1 className="mt-3 max-w-3xl text-4xl font-extrabold sm:text-5xl">
-          Ce qui sort de l'atelier.
+          Ce que nous fabriquons et personnalisons.
         </h1>
         <p className="mt-4 max-w-2xl text-lg leading-relaxed text-muted">
           Sacs fabriqués à l'atelier, textiles et accessoires sélectionnés auprès de nos
@@ -61,28 +61,19 @@ function RealisationsPage() {
           })}
         </div>
 
-        <ul className="mt-8 grid gap-3 sm:grid-cols-2">
-          {pieces.map((piece) => (
-            <li key={piece.title} className="border border-line bg-foam p-5">
-              <h2 className="text-xl font-bold">{piece.title}</h2>
-              <p className="mt-2 leading-relaxed text-muted">{piece.detail}</p>
-            </li>
-          ))}
-        </ul>
-
         {groupes.length > 0 ? (
           groupes.map((groupe) => (
             <div key={groupe.id} className="mt-12">
               <h2 className="text-2xl font-bold">{groupe.titre}</h2>
               <p className="mt-2 text-muted">{groupe.texte}</p>
-              <div className="mt-6 grid gap-4 md:grid-cols-2">
+              <div className="mt-6 grid items-start gap-4 md:grid-cols-2">
                 {groupe.photos.map((photo) => (
                   <figure key={photo.src} className="border border-line bg-foam">
                     <img
                       src={photo.src}
                       alt={photo.alt}
-                      width={1088}
-                      height={640}
+                      width={photo.w ?? 1088}
+                      height={photo.h ?? 640}
                       loading="lazy"
                       className="h-auto w-full"
                     />
@@ -101,6 +92,16 @@ function RealisationsPage() {
             </p>
           </div>
         )}
+
+        <h2 className="mt-16 text-2xl font-bold">Tout ce que nous proposons</h2>
+        <ul className="mt-6 grid gap-3 sm:grid-cols-2">
+          {pieces.map((piece) => (
+            <li key={piece.title} className="border border-line bg-foam p-5">
+              <h3 className="text-xl font-bold">{piece.title}</h3>
+              <p className="mt-2 leading-relaxed text-muted">{piece.detail}</p>
+            </li>
+          ))}
+        </ul>
       </section>
     </SiteShell>
   );
