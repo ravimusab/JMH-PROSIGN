@@ -77,7 +77,9 @@ function RealisationsPage() {
                       loading="lazy"
                       className="h-auto w-full"
                     />
-                    <figcaption className="px-4 py-3 text-sm font-medium">{photo.caption}</figcaption>
+                    {photo.caption ? (
+                      <figcaption className="px-4 py-3 text-sm font-medium">{photo.caption}</figcaption>
+                    ) : null}
                   </figure>
                 ))}
               </div>
@@ -105,4 +107,4 @@ function RealisationsPage() {
       </section>
     </SiteShell>
   );
-}
+  }
