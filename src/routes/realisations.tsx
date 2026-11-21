@@ -66,18 +66,20 @@ function RealisationsPage() {
             <div key={groupe.id} className="mt-12">
               <h2 className="text-2xl font-bold">{groupe.titre}</h2>
               <p className="mt-2 text-muted">{groupe.texte}</p>
-              <div className="mt-6 grid items-start gap-4 md:grid-cols-2">
+              <div className="mt-6 grid gap-4 md:grid-cols-2">
                 {groupe.photos.map((photo) => (
                   <figure key={photo.src} className="border border-line bg-foam">
                     <img
                       src={photo.src}
                       alt={photo.alt}
-                      width={photo.w ?? 1088}
-                      height={photo.h ?? 640}
+                      width={1088}
+                      height={640}
                       loading="lazy"
                       className="h-auto w-full"
                     />
-                    <figcaption className="px-4 py-3 text-sm font-medium">{photo.caption}</figcaption>
+                    {photo.caption ? (
+                      <figcaption className="px-4 py-3 text-sm font-medium">{photo.caption}</figcaption>
+                    ) : null}
                   </figure>
                 ))}
               </div>
