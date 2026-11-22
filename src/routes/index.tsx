@@ -13,6 +13,10 @@ export const Route = createFileRoute("/")({
   component: HomePage,
 });
 
+const whatsappLink = `https://wa.me/${company.whatsapp}?text=${encodeURIComponent(
+  "Bonjour JMH Pro'Sign, je souhaite un devis pour ",
+)}`;
+
 function HomePage() {
   return (
     <SiteShell>
@@ -29,13 +33,15 @@ function HomePage() {
             Des pièces fiables, à votre nom, pour les entreprises, les boutiques et les événements.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Link
-              to="/contact"
+            <a
+              href={whatsappLink}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex h-12 items-center justify-center bg-ember px-5 text-sm font-semibold text-paper"
             >
-              Demander un devis
+              Demander un devis sur WhatsApp
               <ArrowRight className="ml-2 size-4" />
-            </Link>
+            </a>
             <Link
               to="/realisations"
               className="inline-flex h-12 items-center justify-center border border-ink px-5 text-sm font-semibold"
@@ -117,12 +123,14 @@ function HomePage() {
               Dites-nous la pièce, la quantité et la date. On répond sur WhatsApp.
             </p>
           </div>
-          <Link
-            to="/contact"
+          <a
+            href={whatsappLink}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex h-12 items-center bg-paper px-5 text-sm font-semibold text-ink"
           >
-            Écrire à l'atelier
-          </Link>
+            Écrire sur WhatsApp
+          </a>
         </div>
       </section>
     </SiteShell>
