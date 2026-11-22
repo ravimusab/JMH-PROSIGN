@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { SiteShell } from "@/components/site/shell";
-import { categories, familles, lookbook, offerings, type OfferingCat } from "@/data/site";
+import { categories, company, familles, lookbook, offerings, type OfferingCat } from "@/data/site";
 
 export const Route = createFileRoute("/realisations")({
   head: () => ({
@@ -12,6 +12,10 @@ export const Route = createFileRoute("/realisations")({
   }),
   component: RealisationsPage,
 });
+
+const whatsappLink = `https://wa.me/${company.whatsapp}?text=${encodeURIComponent(
+  "Bonjour JMH Pro'Sign, je souhaite un devis pour ",
+)}`;
 
 function RealisationsPage() {
   const [active, setActive] = useState<(typeof categories)[number]["id"]>("tout");
@@ -104,6 +108,22 @@ function RealisationsPage() {
             </li>
           ))}
         </ul>
+
+        <div className="mt-16 border border-line bg-foam px-6 py-10">
+          <h2 className="text-2xl font-bold">Un projet en tête ?</h2>
+          <p className="mt-3 max-w-xl leading-relaxed text-muted">
+            Dites-nous ce qu'il vous faut : sacs, textile, impression. Nous vous répondons sur
+            WhatsApp avec un devis.
+          </p>
+          <a
+            href={whatsappLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-6 inline-flex h-12 items-center bg-ink px-6 text-base font-semibold text-paper"
+          >
+            Demander un devis sur WhatsApp
+          </a>
+        </div>
       </section>
     </SiteShell>
   );
