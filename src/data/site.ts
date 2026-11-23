@@ -231,6 +231,15 @@ export const lookbook: {
   {
     cats: ["sacs"],
     famille: "atelier",
+    src: "/media/atelier-planche.jpg",
+    alt: "Porte-document marron à rabat imprimé, housse à vêtement orange et noire, sac shopping à motifs colorés, fabriqués à l'atelier",
+    caption: "Porte-document, housse à vêtement et sac shopping",
+    w: 1025,
+    h: 1535,
+  },
+  {
+    cats: ["sacs"],
+    famille: "atelier",
     src: "/media/trio-wax.jpg",
     alt: "Conférencier wax et sacs à main en tissu wax siglés JMH Pro'Sign",
     caption: "Conférencier et sacs à main wax",
@@ -248,13 +257,6 @@ export const lookbook: {
     src: "/media/porte-voyage.jpg",
     alt: "Porte-document bleu marine à bande wax et sac de voyage, siglés JMH Pro'Sign",
     caption: "Porte-document et sac de voyage (modèles d'exemple)",
-  },
-  {
-    cats: ["sacs"],
-    famille: "personnalisation",
-    src: "/media/sacs-dos.jpg",
-    alt: "Trois sacs à dos personnalisés au logo JMH Pro'Sign",
-    caption: "Sacs à dos à votre logo (modèles d'exemple)",
   },
   {
     cats: ["sacs"],
