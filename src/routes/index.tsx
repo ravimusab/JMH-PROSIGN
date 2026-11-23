@@ -69,10 +69,10 @@ function HomePage() {
               className="h-full w-full object-cover"
             />
             <img
-              src="/media/sacs-dos.jpg"
-              alt="Sacs à dos personnalisés de l'atelier"
-              width={1088}
-              height={620}
+              src="/media/atelier-accueil.jpg"
+              alt="Housse à vêtement orange et noire et sac shopping à motifs colorés, fabriqués à l'atelier"
+              width={1025}
+              height={810}
               className="h-full w-full object-cover"
             />
           </div>
